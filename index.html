@@ -741,7 +741,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-famil
     toast('Скачивание...');
   };
 
-  // Кнопка "Отправить" — загрузка на tempshare.su на 1 день
+  // Кнопка "Отправить" — загрузка на https://tmps.site/upload на 1 день
   $('saveShareBtn').onclick=async()=>{
     if(!pendingBlob)return;
 
@@ -774,7 +774,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-famil
     fd.append('duration','1');
 
     const xhr=new XMLHttpRequest();
-    xhr.open('POST','https://api.tempshare.su/upload');
+    xhr.open('POST','https://tmps.site/upload');
 
     xhr.upload.onprogress=(e)=>{
       if(e.lengthComputable){
